@@ -1,0 +1,7 @@
+questa macchina accetta in input  un numero a piacere di valori in notazione unaria (espressi con lo 0) tutti separati da una singola "c" e li somma a destra del primo blank che incontra.
+es. input:  000c0c00
+es.output:  000c0c00□000000
+
+la macchina legge la prima unità, la trasforma in X e poi si sposta alla fine dell'input fino a quando incontra il primo simbolo □, fa ancora uno step a destra e scrive uno 0.
+fatto ciò torna indietro spostandosi a sinistra fino alla prima X che incontra, quando la legge fa un passo a destra, e se legge "c" si sposta semplicemente a destra, se legge uno 0 riparte il ciclo di prima, se invece legge un □ vuol dire che ha consumato tutto l'input e quindi torna indietro finchè non incontra un blank cambiando tutte le X che incontra in 0.
+infine quando legge □, si sposta a destra e halts.

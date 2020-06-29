@@ -1,0 +1,9 @@
+Questa macchina legge in input due numeri in notazione binaria con stesso numero di bit separati da una singola "C" e restituisce la somma a sinistra dell'input prima del primo □.
+es. input:  101C001
+es. output: 110□101C001
+
+la testina legge il primo numero in notazione binaria fino a quando incontra il separatore "C", allora fa uno step a sinistra: se legge 1 scrive X e riporta 1 a sinistra del primo □ che incontra(verso sx), se legge 0 scrive Y riporta 0.
+poi si sposta verso destra fino alla prima X o Y che incontra, step a sinistra e si comporta come prima in caso di 1 o di 0 riportando il numero a sinistra dell'ultimo numero che legge, se invece legge □ continua verso destra fino a che non trova una C, quando la trova step a destra finchè non legge □. quando legge □ step a sinistra: 
+- se legge 1 scrive X e cerca verso sinistra il primo □, da lì step a sinistra e se legge 1, scrive Y e riporta 1 a sinistra, se legge 0 scrive X (somma del bit più a destra)
+- se legge 0 scrive Y e cerca verso sinistra il primo □, da lì step a sinistra finchè non legge un numero, e se legge 0 scrive Y o 1 scrive X 
+dopodichè torna verso destra fino alla C, continua a spostarsi verso destra fino alla prima X o Y e poi step a sinistra e cicla come prima su 0 o 1 fino a che non esaurisce tutti i numeri sull'input lasciando qualcosa del tipo : XXY□XYXCYYX. in questo caso legge tutte le lettere verso destra fino al primo □ e poi torna indietro verso sinistra scrivendo 1 per ogni X e 0 per ogni Y che incontra e halts sul secondo □ che legge.

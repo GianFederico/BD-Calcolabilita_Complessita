@@ -1,0 +1,11 @@
+la macchina legge due numeri in notazione binaria separati da una "c" e restituisce il risultato della sottrazione (a-b) se a>b.
+es. input:	1-  100c10
+	2-  □□□□
+	3-  □□□□
+	4-  □□□□
+es. output:1-  100c10
+	2-  □□000□□
+	3-  □□10□□
+	4-  □□010□□
+la macchina legge l'input sul primo nastro e lo riporta fino a che non trova la c, sul secondo nastro fermando lì la testina, dalla c in poi riporta l'input sul terzo nastro finchè non legge □ fermando la testina. il primo nastro rimane fermo, step a sinistra per gli altri, posizionandosi così sui bit più a destra dei due numeri ed esegue la sottrazione tra il bit sul secondo nastro meno il bit sul terzo nastro, e ne scrive il risultato sul quarto.
+0-0=0, 1-0=1 mentre nel caso 0-1 fa il riporto: segna con x lo 0 su cui viene fatto il riporto, porta a 0 il primo 1, e ad 1 il primo 0 che trova verso sinistra, scrive il risultato sul quarto nastro, iterando questo processo finchè legge □ negli ultimi tre nastri ed halts.

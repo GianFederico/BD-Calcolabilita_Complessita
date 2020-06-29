@@ -1,0 +1,7 @@
+questa macchina somma due numeri in notazione binaria separati da □.
+es input: 111□111
+es. output: □1110□
+legge tutti i numeri fino al primo □, step a destra e legge tuutti gli altri numeri fino al secondo □, step a sinistra
+- se legge 1, cancella 1 e si sposta a sinistra fino a che non legge □, step a sinistra, legge tutte le A o B, step a sinistra se legge 1 scrive A e riposta a sinistra 1 e torna verso destra sul □, se legge 0 scrive B e torna verso destra sul □
+- se legge 0, cancella 0 e si sposta a sinistra fino a che non legge □, step a sinistra, legge tutte le A o B, step a sinistra se legge 1 scrive B se legge 0 scrive A 
+itera così fino a che non ci sono più numeri dopo il □ di separazione, a quel punto torna indietro cambiano le A in 0 e le B in 1, quando legge □ step a destra e halts.
