@@ -1,0 +1,12 @@
+questa macchina a 3 nastri, restituisce il risultato (senza resto) della divisione tra due numeri in notazione binaria separati da "/" (a/b).
+es. input:	1-  110/10
+	2-  □□□□
+	3-  □□□□
+es.output :1-  110/10
+	2-  □□11□□
+	3-  111s01
+la macchina legge i numeri in input sul primo nastro e li riscrive nel terzo separati da "s"
+sui primi due nastri si ferma sul primo □ che legge, 
+mentre sul terzo nastro sottrae b volte b da a, operando bit a bit. 
+quindi sul terzo nastro, cerca il primo 1 del divisore e sottrae il bit dalla posizione corretta nel dividendo, aggiungendo eventuali riporti a destra, dopodichè cancella il divisore e segna sul secondo nastro la prima iterazione.
+tramite il primo nastro, riscrive il divisore sul terzo nelle stesse posizioni di prima e continua l'iterazione tramite sottrazione sul numero ottenuto dall'iterata precedente, ed ogni volta che completa l'iterata aggiunge un bit al numero sul secondo nastro, fino a che il dividendo è uguale a 0 oppure troppo piccolo per eseguire la sottrazione in quel caso halts.
